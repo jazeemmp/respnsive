@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --darkblue: hsl(234, 12%, 34%);
+  --grayishblue: hsl(229, 6%, 66%);
+  --lightgray: hsl(0, 0%, 98%);
+  --fontsize: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--lightgray);
+}
+.text-container {
+  width: 35%;
+  text-align: center;
+  margin: 60px;
+  color: var(--grayishblue);
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-container h2 {
+  font-size: 2em;
+  font-weight: 200;
+}
+.text-container h1 {
+  color: var(--darkblue);
+  font-weight: 600;
+}
+/* cards */
+.cards {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  background-color: #fff;
+  width: 370px;
+  height: 250px;
+  margin: 10px;
+  color: var(--grayishblue);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px -3px rgb(220, 220, 241);
+  border-top: 4px solid var(--cyan);
+  position: relative;
+}
+.card svg {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.card h2 {
+  color: var(--darkblue);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.card p {
+  font-size: var(--fontsize);
+}
+.card2 {
+  border-top: 4px solid var(--red);
+}
+.card3 {
+  border-top: 4px solid var(--orange);
+}
+.card4 {
+  border-top: 4px solid var(--blue);
+}
+
+@media only screen and (max-width: 600px) {
+  .text-container {
+    width: 95%;
+  }
+  .text-container p {
+    width: 90%;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
